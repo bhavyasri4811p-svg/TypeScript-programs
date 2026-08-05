@@ -1,13 +1,10 @@
-// Arrow function to add two numbers
-const add = (a: number, b: number): number => {
-    return a + b;
+const sumOfDigits = (num: number): number => {
+    let sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num = Math.floor(num / 10);
+    }
+    return sum;
 };
-// Arrow function to find square
-const square = (num: number): number => num * num;
-// Arrow function without parameters
-const welcome = (): void => {
-    console.log("Welcome to Arrow Functions");
-};
-console.log("Addition =", add(15, 5));
-console.log("Square =", square(6));
-welcome();
+let number = 9876;
+console.log("Sum of Digits:", sumOfDigits(number));
