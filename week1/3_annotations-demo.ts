@@ -1,6 +1,4 @@
-// Variable Annotation
 let number: number = 12345;
-// Function Annotation
 function sumOfDigits(num: number): number {
     let sum: number = 0;
     while (num > 0) {
