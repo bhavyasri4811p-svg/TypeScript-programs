@@ -1,4 +1,3 @@
-// Special Data Types
 let value: any = 5678;
 console.log("Any:", value);
 let input: unknown = 1234;
