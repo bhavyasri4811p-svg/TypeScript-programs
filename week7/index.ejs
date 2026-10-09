@@ -1,1 +1,28 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+<h1><%= title %></h1>
+<% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+<% } %>
+<% if (user) { %>
+    <p style="color:green;">
+        Welcome, <%= user %>! Registration successful.
+    </p>
+    <a href="/">Go Back</a>
+<% } else { %>
+    <form action="/register" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username" required>
+        <br><br>
+        <label>Age:</label>
+        <input type="number" name="age" required>
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+<% } %>
+</body>
+</html>
